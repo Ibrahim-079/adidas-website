@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adidas - Feedback</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="topbar">
+      <p>WE VALUE YOUR FEEDBACK</p>
+    </div>
+    <div class="main-header">
+      <img src="images/logo.png" alt="Adidas Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="kids.html">Kids</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="stores.html">Stores</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="form.html">Form</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main style="max-width: 600px; margin: 50px auto; padding: 20px;">
+    <h1 style="text-align: center; margin-bottom: 30px;">Customer Feedback</h1>
+
+    <form action="php/feedback-handler.php" method="post">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <label for="rating">How satisfied are you?</label>
+      <select id="rating" name="rating" required>
+        <option value="">Select</option>
+        <option value="5">⭐⭐⭐⭐⭐ - Very Satisfied</option>
+        <option value="4">⭐⭐⭐⭐ - Satisfied</option>
+        <option value="3">⭐⭐⭐ - Neutral</option>
+        <option value="2">⭐⭐ - Unsatisfied</option>
+        <option value="1">⭐ - Very Unsatisfied</option>
+      </select>
+
+      <label for="comments">Your Feedback</label>
+      <textarea id="comments" name="comments" rows="5" placeholder="We’d love to hear your thoughts..."></textarea>
+
+      <button type="submit" class="apply-btn">Submit Feedback</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy</a> |
+      <a href="#">Terms</a> |
+      <a href="#">Support</a>
+    </div>
+    <p>&copy; 2025 Adidas</p>
+  </footer>
+
+</body>
+</html>

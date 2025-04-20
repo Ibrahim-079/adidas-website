@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Ultraboost 1.0 Shoes - Adidas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      margin: 0;
+      padding: 0;
+    }
+	
+	 .topbar {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+    }
+	
+   .product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.carousel {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  display: none;
+  object-fit: contain;
+}
+
+.carousel img.active {
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+
+    .product-info {
+      flex: 1;
+      padding: 40px;
+    }
+
+    .product-info h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .product-info p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .product-info .price {
+      font-size: 24px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    .buy-button {
+      background-color: black;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .buy-button:hover {
+      background-color: #333;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+ <header>
+    <div class="topbar">
+      <p>FREE SHIPPING ON ORDERS OVER $50</p>
+    </div>
+    <div class="main-header">
+     <a href="index.html">
+      <img src="images/logo.png" alt="Adidas Logo" class="logo">
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="men.html">Men</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <section class="product-container">
+
+    <!-- Carousel -->
+    <div class="carousel">
+      <button class="arrow left" onclick="prevImage()">&#8592;</button>
+      <button class="arrow right" onclick="nextImage()">&#8594;</button>
+
+      <img src="images/men1.jpg" alt="Product View 1" class="carousel-image active">
+      <img src="images/men1-side.jpg" alt="Product View 2" class="carousel-image">
+      <img src="images/men1-top.jpg" alt="Product View 3" class="carousel-image">
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-info">
+      <h1>Ultraboost 1.0 Shoes</h1>
+      <p>From a walk in the park to a weekend run with friends, these adidas Ultraboost 1.0 shoes are designed to keep you comfortable. An adidas PRIMEKNIT upper gently hugs your feet while BOOST on the midsole cushions from the first step to the last mile. The Stretchweb outsole flexes naturally for an energized ride, and Continental™ Rubber gives you the traction you need to keep that pep in your step.</p>
+      <p class="price">$180.00</p>
+      <a href="#" class="buy-button">Buy Now</a>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy</a> |
+      <a href="#">Terms</a> |
+      <a href="#">Support</a>
+    </div>
+    <p>&copy; 2025 Adidas</p>
+  </footer>
+
+  <script>
+    const images = document.querySelectorAll(".carousel-image");
+    let currentIndex = 0;
+
+    function showImage(index) {
+      images.forEach((img, i) => {
+        img.classList.toggle("active", i === index);
+      });
+    }
+
+    function prevImage() {
+      currentIndex = (currentIndex - 1 + images.length) % images.length;
+      showImage(currentIndex);
+    }
+
+    function nextImage() {
+      currentIndex = (currentIndex + 1) % images.length;
+      showImage(currentIndex);
+    }
+  </script>
+
+</body>
+</html>

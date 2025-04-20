@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adidas - About</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #000;
+    }
+
+    /* Navbar (fixed at the top for all pages) */
+    .main-header {
+      position: fixed;
+      top: 0px; /* Move the navbar below the topbar */
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7); 
+      z-index: 999;
+      padding: 15px 30px;
+    }
+	
+	.main-header nav ul li a {
+      color: white; /* Set text color to white */
+      text-decoration: none;
+      padding: 10px 15px;
+      display: inline-block;
+    }
+
+    /* Free Shipping Bar */
+    .topbar {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 8px;
+      font-size: 14px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    /* Adjust Body to prevent overlap */
+    body {
+      padding-top: 20px; /* This creates space for the topbar */
+    }
+
+    /* About Page Specific Styles */
+    .about-page {
+      background: url('images/about-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh; /* Ensure the background image covers the full height of the page */
+      color: white;
+      padding-top: 120px; /* Additional space to account for topbar and navbar */
+    }
+
+    /* About Page Content */
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.5); /* Darken the background for readability */
+      border-radius: 10px;
+    }
+
+    .about-content h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .about-img {
+      max-width: 80%;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: white;
+      padding: 5px;
+      text-align: center;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer p {
+      margin-top: 2px;
+    }
+  </style>
+</head>
+<body class="about-page">
+
+  <!-- Header -->
+  <header>
+   
+    <div class="main-header">
+      <img src="images/logo.png" alt="Adidas Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="men.html">Men</a></li>
+          <li><a href="women.html">Women</a></li>
+          <li><a href="kids.html">Kids</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="stores.html">Stores</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="form.html">Form</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- About Page Content -->
+  <main>
+    <section class="about-content">
+      <h1>About Adidas</h1>
+      <img src="images/about.jpg" alt="About Adidas" class="about-img">
+      <p>
+        Adidas is a global leader in the sporting goods industry, offering a broad portfolio of footwear, apparel, and accessories. 
+        Our mission is to be the best sports brand in the world by designing products that combine performance, comfort, and style. 
+        We are driven by a relentless pursuit of innovation and a passion for sports.
+      </p>
+
+      <h2>Our Vision</h2>
+      <p>
+        To enable people to harness the power of sport to change lives.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">Privacy</a> |
+      <a href="#">Terms</a> |
+      <a href="#">Support</a>
+    </div>
+    <p>&copy; 2025 Adidas</p>
+  </footer>
+
+</body>
+</html>

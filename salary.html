@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salary Calculation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .form-box {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      text-decoration: none;
+      color: #4CAF50;
+      display: inline-block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-box">
+    <h2>Calculate Salary</h2>
+    <form action="php/salary.php" method="post">
+      <input type="text" name="employee" placeholder="Employee Name" required>
+      <input type="number" name="hours" placeholder="Hours Worked" required>
+      <input type="number" name="rate" placeholder="Rate per Hour" required>
+      <button type="submit">Calculate Salary</button>
+    </form>
+  </div>
+
+</body>
+</html>
