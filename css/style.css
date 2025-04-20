@@ -13,7 +13,7 @@ body {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: black;
 }
 
 /* Top Bar */
@@ -47,7 +47,7 @@ nav ul {
 nav ul li a {
   padding: 8px 12px;
   font-weight: bold;
-  color: #000;
+  color: black;
 }
 
 nav ul li a:hover {
