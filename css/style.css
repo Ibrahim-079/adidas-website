@@ -220,10 +220,10 @@ select {
 
 
 a:link {
-  color: white; /* normal link */
+  color: black; /* normal link */
 }
 a:visited {
-  color: #555; /* visited link */
+  color: lightgray; /* visited link */
 }
 a:hover {
   color: #0073e6;
